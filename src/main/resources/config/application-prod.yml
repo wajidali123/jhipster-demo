@@ -41,8 +41,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/JhipsterDemoApp?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    username: mechsol
-    password: cloud3d@Print
+    username: 
+    password: 
     hikari:
       poolName: Hikari
       auto-commit: false
