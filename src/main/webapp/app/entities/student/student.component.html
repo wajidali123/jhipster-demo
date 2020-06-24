@@ -1,0 +1,67 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterDemoApp.student.home.title">Students</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-student" [routerLink]="['/student/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jhipsterDemoApp.student.home.createLabel">
+            Create a new Student
+            </span>
+        </button>
+    </h2>
+    <jhi-alert-error></jhi-alert-error>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="students?.length === 0">
+        <span jhiTranslate="jhipsterDemoApp.student.home.notFound">No students found</span>
+    </div>
+    <div class="table-responsive" *ngIf="students?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+            <tr>
+            <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+            <th scope="col" ><span jhiTranslate="jhipsterDemoApp.student.fname">Fname</span></th>
+            <th scope="col" ><span jhiTranslate="jhipsterDemoApp.student.mname">Mname</span></th>
+            <th scope="col" ><span jhiTranslate="jhipsterDemoApp.student.lname">Lname</span></th>
+            <th scope="col" ><span jhiTranslate="jhipsterDemoApp.student.email">Email</span></th>
+            <th scope="col" ><span jhiTranslate="jhipsterDemoApp.student.dob">Dob</span></th>
+            <th scope="col" ><span jhiTranslate="jhipsterDemoApp.student.dept">Dept</span></th>
+            <th scope="col" ><span jhiTranslate="jhipsterDemoApp.student.university">University</span></th>
+            <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let student of students ;trackBy: trackId">
+                <td><a [routerLink]="['/student', student.id, 'view' ]">{{student.id}}</a></td>
+                <td>{{student.fname}}</td>
+                <td>{{student.mname}}</td>
+                <td>{{student.lname}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.dob | date:'mediumDate'}}</td>
+                <td>{{student.dept}}</td>
+                <td>{{student.university}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/student', student.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/student', student.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit" (click)="delete(student)"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "jhipsterDemoApp": {
+    "student": {
+      "home": {
+        "title": "Students",
+        "createLabel": "नया Student बनाएँ",
+        "createOrEditLabel": "Student बनाएँ या संपादित करें",
+        "notFound": "No Students found"
+      },
+      "created": "एक नया Student [identifier: {{ param }}] तैयार है",
+      "updated": "एक Student [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Student [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Student [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Student"
+      },
+      "fname": "Fname",
+      "mname": "Mname",
+      "lname": "Lname",
+      "email": "Email",
+      "dob": "Dob",
+      "dept": "Dept",
+      "university": "University"
+    }
+  }
+}

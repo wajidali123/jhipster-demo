@@ -1,0 +1,38 @@
+{
+    "name": "Department",
+    "fields": [
+        {
+            "fieldName": "deptName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "deptLoc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "deptContact",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "university",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200624191212",
+    "entityTableName": "department",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

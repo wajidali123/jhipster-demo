@@ -1,0 +1,25 @@
+{
+  "jhipsterDemoApp": {
+    "university": {
+      "home": {
+        "title": "Universities",
+        "createLabel": "नया University बनाएँ",
+        "createOrEditLabel": "University बनाएँ या संपादित करें",
+        "notFound": "No Universities found"
+      },
+      "created": "एक नया University [identifier: {{ param }}] तैयार है",
+      "updated": "एक University [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "University [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "University [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "University"
+      },
+      "uniName": "Uni Name",
+      "uniLoc": "Uni Loc",
+      "uniContact": "Uni Contact",
+      "city": "City"
+    }
+  }
+}
